@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+
+    <!-- Student Form (Add / Edit) -->
+    <form id="studentForm">
+      <input type="hidden" id="studentId">
+      
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="number" id="age" placeholder="Age" min="1" max="120" required>
+        <input type="text" id="grade" placeholder="Grade/Class" required>
+      </div>
+
+      <button type="submit" id="submitBtn">Add Student</button>
+      <button type="button" id="cancelBtn" class="btn-cancel" style="display: none;">Cancel Edit</button>
+    </form>
+
+    <!-- Search Controls -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search student by name...">
+    </div>
+
+    <!-- Student Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Grade</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody">
+        <!-- Dynamic rows rendered via JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
